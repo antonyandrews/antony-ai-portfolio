@@ -1,0 +1,36 @@
+<section class="testimonials">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      What Clients Say
+    </h2>
+
+    <p class="section-subtitle">
+      Trusted by startups and enterprise teams for Angular & AI expertise.
+    </p>
+
+    <div class="testimonial-grid">
+
+      <div class="testimonial-card" *ngFor="let t of testimonials">
+
+        <div class="stars">
+          <span *ngFor="let star of getStars(t.rating)">★</span>
+        </div>
+
+        <p class="feedback">
+          "{{ t.feedback }}"
+        </p>
+
+        <div class="client-info">
+          <h4>{{ t.name }}</h4>
+          <span>{{ t.role }}</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

@@ -1,0 +1,32 @@
+<section class="services">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      What I Can Help You Build
+    </h2>
+
+    <p class="section-subtitle">
+      From enterprise Angular applications to AI-powered automation tools,
+      I deliver scalable and production-ready solutions.
+    </p>
+
+    <div class="services-grid">
+
+      <mat-card class="service-card" *ngFor="let service of services">
+
+        <div class="icon">
+          {{ service.icon }}
+        </div>
+
+        <h3>{{ service.title }}</h3>
+
+        <p>{{ service.description }}</p>
+
+      </mat-card>
+
+    </div>
+
+  </div>
+
+</section>

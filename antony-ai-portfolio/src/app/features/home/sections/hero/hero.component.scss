@@ -1,0 +1,95 @@
+.hero {
+  position: relative;
+  min-height: 95vh;
+  display: flex;
+  align-items: center;
+  background: radial-gradient(circle at top left, #0f172a, #020617);
+  color: #ffffff;
+  padding: 3rem 2rem;
+  overflow: hidden;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.status-badge {
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #38bdf8;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 1.2rem;
+  font-size: 0.85rem;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.typed-role {
+  display: block;
+  font-size: 1.8rem;
+  color: #38bdf8;
+  margin-top: 0.5rem;
+}
+
+.hero-text p {
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  max-width: 520px;
+}
+
+.stats {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.stats h3 {
+  font-size: 1.5rem;
+  color: #38bdf8;
+}
+
+.stats span {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.social-links a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.hero-image img {
+  width: 320px;
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgba(56, 189, 248, 0.3);
+}
+
+.glow {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.2), transparent);
+  top: -250px;
+  right: -250px;
+  filter: blur(140px);
+}

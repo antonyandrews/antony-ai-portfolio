@@ -1,0 +1,50 @@
+<section class="ai-demo">
+
+  <h2>AI Interactive Playground</h2>
+
+  <mat-tab-group>
+
+    <!-- AI Chat -->
+    <mat-tab label="AI Chat">
+      <div class="tab-content">
+        <textarea [(ngModel)]="prompt"
+                  placeholder="Ask me anything about Angular or AI..."
+                  rows="3"></textarea>
+
+        <button mat-raised-button color="primary"
+                (click)="streamAI()">
+          Ask AI
+        </button>
+      </div>
+    </mat-tab>
+
+    <!-- Code Explainer -->
+    <mat-tab label="Code Explainer">
+      <div class="tab-content">
+        <textarea [(ngModel)]="prompt"
+                  placeholder="Paste Angular code here..."
+                  rows="6"></textarea>
+
+        <button mat-raised-button color="primary"
+                (click)="explainCode()">
+          Explain Code
+        </button>
+      </div>
+    </mat-tab>
+
+    <!-- Resume Analyzer -->
+    <mat-tab label="Resume Analyzer">
+      <div class="tab-content">
+        <input type="file" (change)="analyzeResume($event)" />
+        <p>Upload resume for AI review</p>
+      </div>
+    </mat-tab>
+
+  </mat-tab-group>
+
+  <div class="response" *ngIf="displayedText">
+    <h4>AI Response</h4>
+    <p>{{ displayedText }}</p>
+  </div>
+
+</section>
