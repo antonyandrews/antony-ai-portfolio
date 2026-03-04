@@ -1,0 +1,22 @@
+<section class="blog-list ai-grid">
+    <h1>Blog</h1>
+
+    <div class="glass-container">
+        <div class="blog-grid">
+            <mat-card class="blog-card" *ngFor="let blog of blogs">
+                <img mat-card-image [src]="blog.image" [alt]="blog.title">
+
+                <mat-card-content>
+                    <h3>{{ blog.title }}</h3>
+                    <p>{{ blog.excerpt }}</p>
+                </mat-card-content>
+
+                <mat-card-actions>
+                    <a mat-button color="primary" [routerLink]="['/blog', blog.slug]">
+                        Read More
+                    </a>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</section>

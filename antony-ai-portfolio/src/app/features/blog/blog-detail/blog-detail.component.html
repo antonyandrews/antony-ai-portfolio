@@ -1,0 +1,12 @@
+<section class="blog-detail ai-grid" *ngIf="blog">
+
+  <h1>{{ blog.title }}</h1>
+  <p class="date">{{ blog.date }}</p>
+
+  <img [src]="blog.image" [alt]="blog.title">
+
+  <article>
+    <pre>{{ blog.content }}</pre>
+  </article>
+
+</section>
