@@ -1,12 +1,73 @@
-<section class="blog-detail ai-grid" *ngIf="blog">
+<section class="blog-detail" *ngIf="blog">
 
-  <h1>{{ blog.title }}</h1>
-  <p class="date">{{ blog.date }}</p>
+  <!-- HEADER -->
 
-  <img [src]="blog.image" [alt]="blog.title">
+  <header class="blog-header">
+
+    <h1>{{ blog.title }}</h1>
+
+    <div class="blog-meta">
+      <span class="author">{{ blog.author }}</span>
+      <span>•</span>
+      <span>{{ blog.date }}</span>
+      <span>•</span>
+      <span>{{ blog.readTime }}</span>
+    </div>
+
+    <div class="tags">
+      <span class="tag" *ngFor="let tag of blog.tags">
+        {{ tag }}
+      </span>
+    </div>
+
+    <img class="hero-image" [src]="blog.image" [alt]="blog.title" />
+
+  </header>
+
+  <!-- CONTENT -->
 
   <article>
-    <pre>{{ blog.content }}</pre>
+
+    <ng-container *ngFor="let block of blog.content">
+
+      <!-- Heading -->
+
+      <h2 *ngIf="block.type === 'heading' && block.level === 2">
+        {{ block.text }}
+      </h2>
+
+      <h3 *ngIf="block.type === 'heading' && block.level === 3">
+        {{ block.text }}
+      </h3>
+
+      <!-- Paragraph -->
+
+      <p *ngIf="block.type === 'paragraph'">
+        {{ block.text }}
+      </p>
+
+      <!-- List -->
+
+      <ul *ngIf="block.type === 'list'">
+        <li *ngFor="let item of block.items">
+          {{ item }}
+        </li>
+      </ul>
+
+      <!-- Code -->
+
+      <pre *ngIf="block.type === 'code'">
+<code>{{ block.code }}</code>
+      </pre>
+
+      <!-- Quote -->
+
+      <blockquote *ngIf="block.type === 'quote'">
+        {{ block.text }}
+      </blockquote>
+
+    </ng-container>
+
   </article>
 
 </section>

@@ -1,0 +1,73 @@
+<section class="project-detail ai-grid">
+
+  <div class="container glass-container">
+
+    <h1>{{ project?.title }}</h1>
+
+    <p class="description">
+      {{ project?.description }}
+    </p>
+
+    <img
+      class="project-image"
+      [src]="project?.image"
+      alt="project image"
+    />
+
+    <div class="section">
+
+      <h2>Problem</h2>
+      <p>{{ project?.problem }}</p>
+
+    </div>
+
+    <div class="section">
+
+      <h2>Solution</h2>
+      <p>{{ project?.solution }}</p>
+
+    </div>
+
+    <div class="section">
+
+      <h2>Technology Stack</h2>
+
+      <div class="tech-stack">
+
+        <span
+          class="tech-badge"
+          *ngFor="let tech of project?.tech">
+
+          {{ tech }}
+
+        </span>
+
+      </div>
+
+    </div>
+
+    <div class="actions">
+
+      <a
+        class="ai-button"
+        [href]="project?.github"
+        target="_blank">
+
+        View Code
+
+      </a>
+
+      <a
+        class="ai-button demo"
+        [href]="project?.demo"
+        target="_blank">
+
+        Live Demo
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>

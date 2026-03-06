@@ -18,7 +18,7 @@ export class FeaturedProjectsComponent {
       solution: 'Built Angular frontend with AI integration to analyze resumes and provide improvement suggestions using OpenAI.',
       impact: 'Increased resume shortlisting rate by 40%.',
       tech: ['Angular 20', 'Express.js', 'OpenAI API'],
-      image: 'assets/projects/ai-resume.jpg'
+      image: 'assets/projects/resume_analyzer.png'
     },
     {
       title: 'Enterprise E-Commerce System',
@@ -26,7 +26,7 @@ export class FeaturedProjectsComponent {
       solution: 'Developed Angular 20 application using signals and JWT refresh token system with Express backend.',
       impact: 'Handled 10k+ users with high performance and secure architecture.',
       tech: ['Angular Signals', 'Node.js', 'JWT Auth'],
-      image: 'assets/projects/ecommerce.jpg'
+      image: 'assets/projects/ecommerce.png'
     },
     {
       title: 'AI Chat Integration for SaaS',
@@ -34,7 +34,7 @@ export class FeaturedProjectsComponent {
       solution: 'Integrated custom AI chat module with secure backend proxy and real-time responses.',
       impact: 'Reduced customer support load by 30%.',
       tech: ['Angular', 'WebSocket', 'OpenAI'],
-      image: 'assets/projects/ai-chat.jpg'
+      image: 'assets/projects/ai_chat.png'
     }
   ];
 }

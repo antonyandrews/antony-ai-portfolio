@@ -1,0 +1,57 @@
+<section class="portfolio-page">
+
+  <div class="portfolio-header">
+
+    <h1>Featured Projects</h1>
+
+    <p>
+      Real-world Angular enterprise applications, AI integrations,
+      and scalable architectures built for modern businesses.
+    </p>
+
+  </div>
+
+  <div class="project-grid">
+
+    <div
+      class="project-card"
+      *ngFor="let project of projects"
+      appScrollReveal>
+
+      <div class="image-wrapper">
+        <img [src]="project.image" [alt]="project.title">
+      </div>
+
+      <div class="project-content">
+
+        <h3 class="project-title">
+          {{ project.title }}
+        </h3>
+
+        <p class="project-desc">
+          {{ project.description }}
+        </p>
+
+        <div class="tech-stack">
+          <span
+            class="tech"
+            *ngFor="let tech of project.tech">
+            {{ tech }}
+          </span>
+        </div>
+
+        <a
+          class="view-case"
+          [routerLink]="['/portfolio', project.slug]">
+
+          View Case Study →
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

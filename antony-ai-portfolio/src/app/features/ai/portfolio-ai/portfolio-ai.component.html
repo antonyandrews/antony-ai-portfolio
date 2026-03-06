@@ -1,0 +1,18 @@
+<section class="ai-chat glass-container">
+
+<h2>Ask my AI assistant</h2>
+
+<input
+  [(ngModel)]="message"
+  placeholder="Ask about my skills or projects"
+/>
+
+<button class="ai-button" (click)="askAI()">
+Ask AI
+</button>
+
+<div class="response">
+{{response}}
+</div>
+
+</section>

@@ -17,13 +17,6 @@ body {
   overflow-x: hidden;
 }
 
-/* subtle animated gradient shift */
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
 .app-section-bg {
     background: linear-gradient(180deg,
             #020617 0%,
@@ -53,4 +46,15 @@ body {
   border-radius: 20px;
   border: 1px solid rgba(0, 91, 172, 0.3);
   padding: 2rem;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all .8s ease;
+}
+
+.reveal-active {
+  opacity: 1;
+  transform: translateY(0);
 }

@@ -1,6 +1,22 @@
 <section class="blog-list ai-grid">
     <h1>Blog</h1>
 
+    <div class="blog-search">
+
+        <input type="text" placeholder="Search articles..." [(ngModel)]="searchTerm" (input)="search()" />
+
+    </div>
+
+    <!-- <div class="tag-filter">
+
+        <span class="tag" *ngFor="let tag of ['Angular','AI','Performance','Architecture']" (click)="filterByTag(tag)">
+
+            {{ tag }}
+
+        </span>
+
+    </div> -->
+
     <div class="glass-container">
         <div class="blog-grid">
             <mat-card class="blog-card" *ngFor="let blog of blogs">

@@ -4,6 +4,17 @@ export const config = {
   runtime: "edge"
 };
 
+const context = `
+You are Antony's AI portfolio assistant.
+
+About Antony:
+- Angular developer with 9 years experience
+- Associate Tech Lead
+- Expert in Angular, Node.js, AI integrations
+- Builds enterprise architectures
+- Available for freelance and consulting
+`;
+
 export default async function handler(req) {
   try {
     const { message } = await req.json();
